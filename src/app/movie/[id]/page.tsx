@@ -24,7 +24,7 @@ function page({params}:{params:Promise<{id:string}>}) {
             const fetchMovie = async()=>
             {
                 try {
-                    const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=2ea05c2f444f6fe57492711ba6641efa`);
+                    const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=cafcc772ee4c70c2ec5b8fcf2f41e547`);
                     const data = await res.json();
                     setMovie(data)
                 }catch(error)

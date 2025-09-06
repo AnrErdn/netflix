@@ -19,3 +19,14 @@ export async function getAllMovies() {
         return { results: [] };
     }
 }
+
+export async function getMovieById(id: string) {
+    try {
+        const apiKey = 'cafcc772ee4c70c2ec5b8fcf2f41e547';
+        const res = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`);
+        return res.data;
+    } catch (error) {
+        console.error('Failed to fetch movie:', error);
+        return null;
+    }
+}
